@@ -1,7 +1,7 @@
 Summary: GlusterFS 3.7 packages from the CentOS Storage SIG repository
 Name: centos-release-gluster37
 Version: 1.0
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Gluster-3.7.repo
@@ -28,6 +28,9 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Glust
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Gluster-3.7.repo
 
 %changelog
+* Fri Nov 13 2015 Niels de Vos <ndevos@redhat.com> - 1.0-4
+- Disable "gpgcheck" for testing repo, packages are not signed
+
 * Thu Nov 12 2015 Niels de Vos <ndevos@redhat.com> - 1.0-3
 - Drop the license file, it does not seem to be needed for -release packages
 
