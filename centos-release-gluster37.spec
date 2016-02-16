@@ -1,7 +1,7 @@
 Summary: GlusterFS 3.7 packages from the CentOS Storage SIG repository
 Name: centos-release-gluster37
 Version: 1.0
-Release: 5%{?dist}
+Release: 6%{?dist}
 License: GPLv2
 URL: http://wiki.centos.org/SpecialInterestGroup/Storage
 Source0: CentOS-Gluster-3.7.repo
@@ -28,6 +28,9 @@ install -D -m 644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/CentOS-Glust
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Gluster-3.7.repo
 
 %changelog
+* Tue Feb 16 2016 Kaleb S. KEITHLEY <kkeithle at redhat.com> - 1.0-6
+- Add -debuginfo and -source repos, post tag permission
+
 * Tue Feb 16 2016 Kaleb S. KEITHLEY <kkeithle at redhat.com> - 1.0-5
 - Add -debuginfo and -source repos
 
